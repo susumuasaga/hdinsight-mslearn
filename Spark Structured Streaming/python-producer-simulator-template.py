@@ -19,7 +19,10 @@ stockList = ['msft', 'ba', 'jnj', 'f', 'tsla', 'bac', 'ge', 'mmm', 'intc', 'wmt'
 stockMeanPrices = 	{'msft':{"mean":152, "stddev":5}, 'ba':{"mean":345, "stddev":10}, 'jnj':{"mean":141, "stddev":10}, 'f':{"mean":9, "stddev":1}, 'tsla':{"mean":330, "stddev":10}, \
 					'bac':{"mean":34, "stddev":1}, 'ge':{"mean":11, "stddev":1}, 'mmm':{"mean":168, "stddev":5}, 'intc':{"mean":55, "stddev":2}, 'wmt':{"mean":120, "stddev":3}}
 defaultLoops = 1000
-kafkaBrokers = ['kafka-broker-endpoint-from-ssh-session'] #TODO: Replace with your Kafak broker endpoint (including port)
+kafkaBrokers = [
+	'wn0-kafkas.cdpy143v1neujejbg4fhxrukga.bx.internal.cloudapp.net'
+	':9092'
+]
 kafkaTopic = 'stockVals'
 simulator = True
 
