@@ -25,9 +25,9 @@ kafka_brokers = [
 kafka_topic = "stockVals"
 
 parser = argparse.ArgumentParser()
-parser.add_argument("loops", type=int, default=1000)
+parser.add_argument("-n", type=int, default=1000)
 args = parser.parse_args()
-print(f"Number of loops is {args.loops}")
+print(f"Number of loops is {args.n}")
 
 print("Running in simulated mode")
 
@@ -45,7 +45,7 @@ def main():
 	Main routine produce `args.loops` simulated list of stock prices
 	to `kafka_topic`, one per second.
 	"""
-	for x in range(args.loops):
+	for x in range(args.n):
 		response_list = simulated_response()
 
 		print(json.dumps(response_list, indent=2))
